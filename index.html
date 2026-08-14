@@ -87,25 +87,19 @@
         <h2 class="title is-2">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Reliable fall recovery is essential for humanoid robots operating autonomously in unstructured environments.
-            Recent learning-based studies have advanced both standing-up across diverse terrain conditions and unified
-            recovery&ndash;locomotion control. However, these capabilities have largely been investigated as separate
-            settings, leaving sustained command-following locomotion after recovery on heterogeneous terrains
-            comparatively less explored. We present
-            <strong style="color:#13c253; font-weight:800;">UniReLo</strong> (Learning a Unified Humanoid Policy from Fall Recovery to Locomotion across Diverse Terrains), a unified framework for fall recovery and subsequent
-            velocity-commanded locomotion across heterogeneous terrains.
-            <strong style="color:#13c253; font-weight:800;">Terrain-Conditioned Stable-Region Guidance</strong> evaluates
-            recovery feasibility using terrain-relative support geometry and complementary stability factors, encouraging
-            support configurations suitable for subsequent locomotion rather than relying on upright posture alone.
-            <strong style="color:#13c253; font-weight:800;">Continuously Gated Multi-Scale Motion Priors</strong> use
-            quantified recovery progress to coordinate frame-, sequence-, and gait-level adversarial supervision throughout
-            recovery, transition, and locomotion. Simulation comparisons and controlled ablations on flat ground, gravel,
-            and 10&deg; and 15&deg; slopes demonstrate improved recovery success, support stability, and
-            recovery-to-locomotion transition continuity over the evaluated baselines. Hardware experiments using a 29-DoF
-            Unitree&nbsp;G1 humanoid cover the same terrain categories and additionally include outdoor grass, which is
-            absent from simulation training. The results demonstrate sustained command-following locomotion after
-            recovery, disturbance resistance during walking, and autonomous recovery from fall-inducing perturbations,
-            while indicating the cross-terrain generalization of the learned policy.
+            Reliable fall recovery, which commonly aims at attaining a nominal upright posture, is essential for the
+            autonomous operation of humanoid robots in unstructured field environments. Although existing
+            posture-centered methods can synthesize coordinated whole-body recovery motions from diverse fallen
+            configurations, they may result in a dynamically fragile support state, leading to secondary loss of balance
+            or unstable resumption of commanded locomotion, particularly under terrain-dependent contact conditions. We
+            propose to learn a unified humanoid policy from fall recovery to locomotion (UniReLo) across heterogeneous
+            field terrains. Terrain-conditioned recovery guidance evaluates the evolving support state using a
+            terrain-relative support representation and support-feasibility assessment to derive recovery progress.
+            UniReLo then leverages continuously gated multi-scale motion priors to modulate frame-, sequence-, and
+            gait-level adversarial supervision according to this progress, preserving the distinct temporal structures of
+            recovery and locomotion without requiring fixed-threshold switching. Simulation and outdoor real-world
+            experiments demonstrate that UniReLo can deliver stable and continuous recovery-to-locomotion behaviors for
+            humanoids across diverse field terrains.
           </p>
         </div>
       </div>
@@ -375,18 +369,7 @@
 </section>
 
 
-<!-- ===================== BIBTEX ===================== -->
-<section class="section" id="BibTeX">
-  <div class="container content" style="max-width: 960px; margin: 0 auto;">
-    <h2 class="title is-2" style="text-align:center;">BibTeX</h2>
-    <pre style="background:#f5f5f5; padding:1.25rem; border-radius:8px; overflow-x:auto;"><code>@misc{unirelo2026,
-  title   = {{UniReLo}: Learning a Unified Humanoid Policy from Fall Recovery to Locomotion across Diverse Terrains},
-  author  = {Anonymous},
-  note    = {Under double-blind review},
-  year    = {2026}
-}</code></pre>
-  </div>
-</section>
+<!-- BibTeX section removed (under double-blind review) -->
 
 </body>
 
